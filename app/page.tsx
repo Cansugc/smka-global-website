@@ -167,7 +167,7 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-foreground/20 text-foreground hover:bg-secondary px-8">
+                <Button asChild variant="outline" size="lg" className="bg-background border-foreground/20 text-foreground hover:bg-secondary hover:text-foreground px-8">
                   <Link href="/services">Start Your Project</Link>
                 </Button>
               </div>
