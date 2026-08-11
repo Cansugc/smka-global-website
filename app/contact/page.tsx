@@ -57,16 +57,58 @@ export default function ContactPage() {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrorMessage("")
+
+    // Validate required fields
+    if (
+      !formState.name.trim() ||
+      !formState.email.trim() ||
+      !formState.projectType.trim() ||
+      !formState.description.trim()
+    ) {
+      setErrorMessage("Please fill out all required fields.")
+      return
+    }
+
+    // Validate email format
+    if (!emailRegex.test(formState.email.trim())) {
+      setErrorMessage("Please enter a valid email address.")
+      return
+    }
+
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      })
+
+      if (!res.ok) {
+        throw new Error("Request failed")
+      }
+
+      setIsSubmitted(true)
+      setFormState({
+        name: "",
+        email: "",
+        phone: "",
+        projectType: "",
+        timeline: "",
+        description: "",
+      })
+    } catch {
+      setErrorMessage("Something went wrong while submitting your request. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -151,8 +193,8 @@ export default function ContactPage() {
                     Project Request Received!
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Thank you for reaching out. Our team will review your project and contact you 
-                    within 24 hours with contractor recommendations.
+                    Thank you! Your project request has been submitted successfully. We&apos;ll get 
+                    back to you soon.
                   </p>
                   <Button
                     className="mt-6 bg-secondary text-secondary-foreground hover:bg-secondary/90"
@@ -278,6 +320,12 @@ export default function ContactPage() {
                       placeholder="Tell us about your project: What work needs to be done? What's the scope? Any specific requirements or concerns?"
                     />
                   </div>
+
+                  {errorMessage && (
+                    <p className="text-sm text-destructive" role="alert">
+                      {errorMessage}
+                    </p>
+                  )}
 
                   <Button type="submit" size="lg" className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90" disabled={isSubmitting}>
                     {isSubmitting ? (
