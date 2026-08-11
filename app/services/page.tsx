@@ -171,11 +171,18 @@ export default function ServicesPage() {
               Our Services
             </p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-              Comprehensive Construction Solutions
+              Our Services
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/90 sm:text-xl">
-              From renovation to demolition, roofing to custom builds, we connect you with 
-              qualified contractors for every type of construction project.
+              SMKA Global helps clients find suitable contractors based on their project
+              requirements, scope, and service needs. From initial project information to
+              contractor matching, we provide support designed to make the process efficient
+              and convenient.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-white/90 sm:text-xl">
+              Our network allows us to assist with a variety of project and service requirements.
+              We focus on connecting each client with appropriate professionals while maintaining
+              clear communication and coordination throughout the process.
             </p>
           </div>
         </div>

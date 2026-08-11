@@ -82,11 +82,17 @@ export default function AboutPage() {
               About Us
             </p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl text-balance">
-              Connecting Clients with Trusted Construction Professionals
+              About SMKA Global
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-white/90 sm:text-xl">
-              SMKA Global bridges the gap between clients and qualified contractors, 
-              ensuring every project is completed with professionalism and care.
+              SMKA Global is an Ontario-based company focused on connecting clients with reliable
+              contractors and service professionals. We provide a straightforward way for clients
+              to communicate their project needs and find suitable professionals for the work.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-white/90 sm:text-xl">
+              We value reliability, transparency, and effective communication. By carefully
+              coordinating between clients and contractors, we aim to make every stage of the
+              project easier to manage and help build long-term professional relationships.
             </p>
           </div>
         </div>

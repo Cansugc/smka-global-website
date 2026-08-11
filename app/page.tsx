@@ -154,11 +154,17 @@ export default function HomePage() {
                 <span className="text-sm text-muted-foreground font-medium">Trusted by 500+ clients</span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance leading-[1.1]">
-                Construction &<br />Project Solutions
+                Building Better Projects Through Trusted Connections
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-xl">
-                SMKA Global connects you with qualified contractors and skilled professionals 
-                for construction, renovation, repair, and custom building projects.
+                SMKA Global connects clients with qualified and vetted contractors for projects
+                of different sizes and requirements. We focus on making the process simple,
+                organized, and reliable from the first request to project completion.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground max-w-xl">
+                Share your project details with us, and we&apos;ll help identify suitable
+                professionals from our network. Our goal is to create efficient connections,
+                clear communication, and a smoother project experience.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
                 <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-md px-8">
