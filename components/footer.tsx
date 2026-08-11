@@ -96,7 +96,7 @@ export function Footer() {
             <ul className="mt-6 space-y-4">
               <li className="flex items-center gap-3 text-sm text-accent-foreground/70">
                 <Mail className="h-4 w-4 text-primary" />
-                contact@smkaglobal.com
+                info@smkaglobal.ca
               </li>
               <li className="flex items-center gap-3 text-sm text-accent-foreground/70">
                 <Phone className="h-4 w-4 text-primary" />

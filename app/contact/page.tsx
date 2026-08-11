@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contact@smkaglobal.com",
+    value: "info@smkaglobal.ca",
     description: "We reply within 24 hours",
   },
   {
