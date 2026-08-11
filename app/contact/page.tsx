@@ -24,8 +24,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Service Area",
-    value: "Nationwide",
-    description: "Contractors available across the country",
+    value: "Ontario",
+    description: "Connecting clients with qualified contractors across Ontario.",
   },
 ]
 
