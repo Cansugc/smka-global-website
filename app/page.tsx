@@ -298,8 +298,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose SMKA Global */}
-      <section className="py-24 sm:py-32 bg-beige">
+      {/* About Us */}
+      <section id="about" className="py-24 sm:py-32 bg-beige scroll-mt-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24 items-center">
             <div className="relative order-2 lg:order-1">
@@ -319,14 +319,22 @@ export default function HomePage() {
             
             <div className="order-1 lg:order-2">
               <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-                Why Choose Us
+                About Us
               </p>
               <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Why Choose SMKA Global
+                Connecting Projects with the Right Professionals
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                We carefully vet every contractor and worker in our network. Your safety, 
-                satisfaction, and project success are our top priorities.
+                SMKA Global is an Ontario-based company dedicated to connecting clients with
+                reliable and qualified contractors. We simplify the process of finding the right
+                professionals by understanding each project&apos;s specific needs and matching
+                clients with suitable contractors from our network.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                Our approach is built around reliability, clear communication, and efficient
+                coordination. Whether it&apos;s a renovation, roofing, demolition, or another
+                construction project, our goal is to help clients move forward with confidence
+                while building strong and dependable relationships with contractors.
               </p>
               <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {whyChooseUs.map((item) => (
